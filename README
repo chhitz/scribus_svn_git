@@ -10,11 +10,24 @@ The SVN repository contains an additional folder "Scribus" at the
 project root. This folder is skipped during conversion, so that the
 programm sources appear in the repository root.
 
-All SVN commiters need to listed in svn_authors.txt.
-
 The git_repo_init.sh script configures an empty Git repository to
 receive the SVN commits.
 
 The update_from_svn.sh script pulls new commits from SVN, creates Git
 tags from SVN tags and pushes the result to the configured "origin"
 Git remote repository.
+
+Caveat
+------
+
+All SVN commiters need to be listed in svn_authors.txt. A missing
+author will lead to an error:
+
+       Author: <username> not defined in /path/to/svn_authors.txt file
+
+In this case, add the new commiter to the svn_authors.txt file with
+the following format:
+
+    username = Full Name <email@address.xzy>
+
+and re-run the import.
