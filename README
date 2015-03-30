@@ -1,0 +1,20 @@
+README
+======
+
+This repository contains the meta-data used to convert the Scribus SVN
+(svn://scribus.net) repository to Git.
+
+The trunk and all branches and tags are imported from SVN into Git.
+
+The SVN repository contains an additional folder "Scribus" at the
+project root. This folder is skipped during conversion, so that the
+programm sources appear in the repository root.
+
+All SVN commiters need to listed in svn_authors.txt.
+
+The git_repo_init.sh script configures an empty Git repository to
+receive the SVN commits.
+
+The update_from_svn.sh script pulls new commits from SVN, creates Git
+tags from SVN tags and pushes the result to the configured "origin"
+Git remote repository.
