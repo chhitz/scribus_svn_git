@@ -15,7 +15,8 @@ receive the SVN commits.
 
 The update_from_svn.sh script pulls new commits from SVN, creates Git
 tags from SVN tags and pushes the result to the configured "origin"
-Git remote repository.
+Git remote repository. (To congigure this origin Git remote repo, 
+just do a "git remote add repo_name repo_url" in the shell).
 
 
 How to set-up
