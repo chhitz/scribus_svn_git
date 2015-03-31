@@ -17,13 +17,29 @@ The update_from_svn.sh script pulls new commits from SVN, creates Git
 tags from SVN tags and pushes the result to the configured "origin"
 Git remote repository.
 
+
+How to set-up
+-------------
+
+1. create empty git repository
+          git init <nice_name>
+2. move into the git repository
+          cd <nice_name>
+3. initialize git svn
+          ./path/to/git_repo_init.sh
+4. configure remote Git server
+          git remote add origin <URL/to/remote>
+5. import svn into git
+          ./path/to/update_from_svn.sh
+
+
 Caveat
 ------
 
 All SVN commiters need to be listed in svn_authors.txt. A missing
 author will lead to an error:
 
-       Author: <username> not defined in /path/to/svn_authors.txt file
+    Author: <username> not defined in /path/to/svn_authors.txt file
 
 In this case, add the new commiter to the svn_authors.txt file with
 the following format:
