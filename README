@@ -48,3 +48,8 @@ the following format:
     username = Full Name <email@address.xzy>
 
 and re-run the import.
+
+External references
+===================
+
+* github to svn and svn to github sync scripts using another git repo : http://zone.spip.org/trac/spip-zone/browser/_outils_/svn2git/trunk
